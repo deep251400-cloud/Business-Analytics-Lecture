@@ -1,0 +1,53 @@
+%%writefile README.md
+# Sales Prediction with Linear Regression (Streamlit App)
+
+This project demonstrates a simple Linear Regression model deployed as a Streamlit web application to predict sales based on advertising budgets for TV, Radio, and Newspaper.
+
+## Project Structure
+- `Advertising - Advertising.csv`: The dataset used for training the model.
+- `lr.sav`: The saved pre-trained Linear Regression model.
+- `app.py`: The Streamlit application that loads the model and provides an interactive interface for sales prediction.
+- `README.md`: This file.
+
+## Getting Started
+
+### Prerequisites
+Make sure you have Python installed. You'll also need the following Python libraries:
+- `pandas`
+- `numpy`
+- `scikit-learn`
+- `joblib`
+- `streamlit`
+
+YouYou can install them using pip:
+```bash
+pip install pandas numpy scikit-learn joblib streamlit
+```
+
+### Running the Streamlit App
+1. Clone this repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Ensure you have the `Advertising - Advertising.csv` dataset and the `lr.sav` model file in the same directory.
+4. Run the Streamlit application using the command:
+   ```bash
+   streamlit run app.py
+   ```
+5. Your web browser will automatically open to the Streamlit app (usually at `http://localhost:8501`).
+
+## How to Use the App
+
+On the Streamlit interface, you will find three sliders:
+- **TV Advertising Budget ($)**: Adjust this slider to set the budget for TV advertising.
+- **Radio Advertising Budget ($)**: Adjust this slider to set the budget for Radio advertising.
+- **Newspaper Advertising Budget ($)**: Adjust this slider to set the budget for Newspaper advertising.
+
+After setting the desired budgets, click the **'Predict Sales'** button to see the predicted sales value based on the Linear Regression model.
+
+## Model Details
+The Linear Regression model was trained on the provided advertising dataset. It learns the relationship between the advertising budgets (TV, Radio, Newspaper) and the resulting sales. The model's coefficients and intercept reflect how each advertising channel influences sales.
+
+**Intercept:** `2.99489303049533`
+**Coefficients (TV, Radio, Newspaper):** `[ 0.04458402, 0.19649703, -0.00278146]`
+
+## Data Source
+The `Advertising - Advertising.csv` dataset contains information on advertising budgets and sales figures.
